@@ -1,10 +1,26 @@
-import random
-num = random.randint(0,10)
-print("I have picked a number 1-10,try to guess it: ")
-while True:
-    guess = int(input("Guess the number: "))
-    if guess == num:
-        print("You won")
-        break
-    else:
-        print("Try again")
+student_data={'id1':
+              {'name':['Sara'],
+               'class':['V'],
+               'subject':['english,math,science']
+               },
+        'id2':
+            {'name':['David'],
+               'class':['V'],
+               'subject':['english,math,science']
+               },
+        'id2':
+            {'name':['Sara'],
+               'class':['V'],
+               'subject':['english,math,science']
+               },
+        'id2':
+            {'name':['Surya'],
+               'class':['V'],
+               'subject':['english,math,science']
+               },
+}
+result={}
+for key,value in student_data.items():
+    if value not in result.values():
+        result[key]= value
+print(result)
